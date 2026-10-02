@@ -1,0 +1,1188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<!--
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  FIRMAN WEB  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  NUSANTARA CONNECT ~ Tema Blogspot (Blogger Layouts v3 / x-cml)
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Satu tema, lima mode merek: LPK Putri Ayu Mandiri, Paes Nusa, Asosiasi
+  Perias Nusantara, Mbak Ayu, dan Pak Urip Sedyowidodo. Warna, tipografi, motif
+  batik, header, dan footer berubah serentak lewat satu variabel (brandMode).
+
+  CARA PASANG
+  1. Blogger > Tema > klik ikon panah > Restore > unggah berkas ini.
+  2. Theme > Customize > Advanced > Brand > isi brandMode: lpk / wo / asosiasi
+     / ayu / urip.
+  3. Layout: atur ulang widget bila perlu (semuanya sudah tersedia).
+  4. Tautan WhatsApp, email, dan alamat ada di widget HTML (Hubungi Tim) dan
+     LinkList (Kanal Resmi) > ubah lewat Layout.
+
+  Kredit: Desain Web oleh Firman Web.
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:version='2' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<meta charset='UTF-8'/>
+<meta content='width=device-width, initial-scale=1, viewport-fit=cover' name='viewport'/>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<b:include data='blog' name='all-head-content'/>
+<title><data:blog.pageTitle/></title>
+
+<meta expr:content='data:blog.metaDescription' name='description'/>
+<meta expr:content='data:blog.title' name='author'/>
+<meta content='#0E7C66' name='theme-color'/>
+<meta content='light' name='color-scheme'/>
+<meta content='website' property='og:type'/>
+<meta expr:content='data:blog.pageName ? data:blog.pageName : data:blog.title' property='og:title'/>
+<meta expr:content='data:blog.canonicalUrl' property='og:url'/>
+<meta expr:content='data:blog.metaDescription' property='og:description'/>
+<meta expr:content='data:blog.title' property='og:site_name'/>
+
+<link expr:href='data:blog.canonicalUrl' rel='canonical'/>
+<link href='https://fonts.gstatic.com' rel='preconnect' crossorigin='anonymous'/>
+<link href='https://fonts.googleapis.com' rel='preconnect' crossorigin='anonymous'/>
+<link href='https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap' rel='stylesheet'/>
+<link expr:href='data:blog.homepageUrl + &quot;favicon.ico&quot;' rel='icon'/>
+
+<b:template-skin><![CDATA[
+    body#layout, body#layout .wrap, body#layout .fw-shell { max-width: 1080px !important; }
+    body#layout .fw-head, body#layout .fw-foot { display: none !important; }
+    body#layout .fw-main { display: block !important; padding: 12px !important; }
+    body#layout .fw-side { display: block !important; }
+    body#layout section { margin-bottom: 8px !important; }
+]]></b:template-skin>
+
+<b:skin><![CDATA[/*
+---------------------------------------------------------------------------
+Blogger Template Style
+Name        : Firman Web - Nusantara Connect
+Author      : Firman Web
+Designer    : Desain Web oleh Firman Web
+Version     : 3.0.0
+License     : Bebas dipakai untuk situs jaringan Firman Web
+---------------------------------------------------------------------------
+Pilihan mode merek: ganti nilai variabel "brandMode" (Theme Designer > Grup
+"Brand") menjadi salah satu dari: lpk, wo, asosiasi, ayu, urip.
+Atau biarkan kosong untuk memakai palet warna kustom di bawah ini.
+---------------------------------------------------------------------------
+*/
+/* Variable definitions
+   <Variable name="keycolor" description="Warna utama merek" type="color" default="#0E7C66" value="#0E7C66"/>
+
+   <Group description="Brand" selector="body">
+     <Variable name="brandMode" description="Mode merek: lpk / wo / asosiasi / ayu / urip" type="text" default="lpk" value="lpk"/>
+     <Variable name="brandDeep" description="Warna utama gelap" type="color" default="#0A5546" value="#0A5546"/>
+     <Variable name="brandSoft" description="Latar merek muda" type="color" default="#E7F2EE" value="#E7F2EE"/>
+     <Variable name="accentColor" description="Warna aksen (emas/baton)" type="color" default="#C79A3B" value="#C79A3B"/>
+     <Variable name="accentSoft" description="Latar aksen muda" type="color" default="#FBF3E2" value="#FBF3E2"/>
+     <Variable name="pageBackground" description="Latar halaman" type="color" default="#FBF8F3" value="#FBF8F3"/>
+     <Variable name="surface" description="Latar kartu" type="color" default="#FFFFFF" value="#FFFFFF"/>
+     <Variable name="ink" description="Warna teks utama" type="color" default="#14211C" value="#14211C"/>
+     <Variable name="muted" description="Warna teks sekunder" type="color" default="#5C6A63" value="#5C6A63"/>
+     <Variable name="line" description="Garis tepi" type="color" default="#E4DCCE" value="#E4DCCE"/>
+   </Group>
+
+   <Group description="Tipografi" selector="body">
+     <Variable name="body.font" description="Font isi" type="font" default="normal normal 17px 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif" value="normal normal 17px 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif"/>
+     <Variable name="heading.font" description="Font judul" type="font" default="normal normal 40px 'Playfair Display', Georgia, serif" value="normal normal 40px 'Playfair Display', Georgia, serif"/>
+     <Variable name="heading.color" description="Warna judul" type="color" default="#14211C" value="#14211C"/>
+   </Group>
+
+   <Group description="Tata letak" selector="body">
+     <Variable name="contentWidth" description="Lebar konten" type="length" default="1240px" min="760px" max="1560px" value="1240px"/>
+     <Variable name="radius" description="Sudut membulat" type="length" default="20px" min="0px" max="34px" value="20px"/>
+     <Variable name="post.shadow" description="Bayangan kartu" type="shadow" default="0 18px 40px rgba(20,33,28,.08)" value="0 18px 40px rgba(20,33,28,.08)"/>
+   </Group>
+*/
+
+/* ==========================================================================
+   1. TOKEN + LIMA MODE MEREK
+   ========================================================================== */
+:root{
+  --brand:$(keycolor);
+  --brand-deep:$(brandDeep);
+  --brand-soft:$(brandSoft);
+  --accent:$(accentColor);
+  --accent-soft:$(accentSoft);
+  --bg:$(pageBackground);
+  --surface:$(surface);
+  --surface-2:color-mix(in srgb, $(pageBackground) 62%, #fff);
+  --ink:$(ink);
+  --ink-soft:color-mix(in srgb, $(ink) 78%, #fff);
+  --muted:$(muted);
+  --line:$(line);
+  --line-strong:color-mix(in srgb, $(line) 70%, $(ink));
+  --radius:$(radius);
+  --radius-lg:calc(var(--radius) + 8px);
+  --radius-s:calc(var(--radius) - 8px);
+  --radius-xs:calc(var(--radius) - 12px);
+  --shadow:$(post.shadow);
+  --shadow-2:0 26px 60px rgba(20,33,28,.14);
+  --ff-display:'Playfair Display', Georgia, 'Times New Roman', serif;
+  --ff-body:'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --maxw:$(contentWidth);
+  --pad:clamp(18px, 4.4vw, 44px);
+  --sec:clamp(46px, 7vw, 104px);
+  --head-h:74px;
+  --text-scale:1;
+  --ease:cubic-bezier(.22,.75,.2,1);
+  --batik:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='86' height='86' viewBox='0 0 86 86'%3E%3Cg fill='none' stroke='%230E7C66' stroke-width='1.6' opacity='.5'%3E%3Ccircle cx='43' cy='43' r='27'/%3E%3Ccircle cx='0' cy='0' r='27'/%3E%3Ccircle cx='86' cy='0' r='27'/%3E%3Ccircle cx='0' cy='86' r='27'/%3E%3Ccircle cx='86' cy='86' r='27'/%3E%3Cpath d='M43 16l27 27-27 27-27-27z'/%3E%3C/g%3E%3C/svg%3E");
+}
+/* mode merek: satu kata di Theme Designer, seluruh tampilan ikut berubah */
+body.brand-lpk{--brand:#0E7C66;--brand-deep:#0A5546;--brand-soft:#E7F2EE;--accent:#C79A3B;--accent-soft:#FBF3E2;--bg:#FBF8F3;--ff-display:'Playfair Display',Georgia,serif;--radius:20px}
+body.brand-wo{--brand:#8E2C4C;--brand-deep:#5E1B33;--brand-soft:#FAECEF;--accent:#C8A45C;--accent-soft:#FBF4E6;--bg:#FCF8F6;--ff-display:'Cormorant Garamond',Georgia,serif;--radius:28px}
+body.brand-asosiasi{--brand:#1D5C8A;--brand-deep:#123F60;--brand-soft:#E8F1F8;--accent:#BE8A2C;--accent-soft:#FAF3E4;--bg:#F7FAFC;--ff-display:'Marcellus',Georgia,serif;--radius:12px}
+body.brand-ayu{--brand:#6D3B8A;--brand-deep:#46235C;--brand-soft:#F3ECF8;--accent:#C9A227;--accent-soft:#FBF5E3;--bg:#FDFAF7;--ff-display:'Jost','Playfair Display',sans-serif;--radius:24px}
+body.brand-urip{--brand:#145A32;--brand-deep:#0C3D21;--brand-soft:#E9F3EC;--accent:#B7791F;--accent-soft:#FBF2E2;--bg:#F8FAF7;--ff-display:'Archivo','Helvetica Neue',Arial,sans-serif;--radius:9px}
+body.brand-lpk{--batik:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='86' height='86'%3E%3Cg fill='none' stroke='%230E7C66' stroke-width='1.6' opacity='.5'%3E%3Ccircle cx='43' cy='43' r='27'/%3E%3Ccircle cx='0' cy='0' r='27'/%3E%3Ccircle cx='86' cy='0' r='27'/%3E%3Ccircle cx='0' cy='86' r='27'/%3E%3Ccircle cx='86' cy='86' r='27'/%3E%3C/g%3E%3C/svg%3E")}
+body.brand-wo{--batik:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cg fill='none' stroke='%238E2C4C' stroke-width='1.4' opacity='.42'%3E%3Cpath d='M0 60Q30 20 60 60T120 60'/%3E%3Cpath d='M0 30Q30 -10 60 30T120 30'/%3E%3Cpath d='M0 90Q30 50 60 90T120 90'/%3E%3Ccircle cx='60' cy='60' r='6'/%3E%3C/g%3E%3C/svg%3E")}
+body.brand-asosiasi{--batik:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72'%3E%3Cg fill='none' stroke='%231D5C8A' stroke-width='1.5' opacity='.4'%3E%3Cpath d='M0 36h72M36 0v72M0 0l72 72M72 0L0 72'/%3E%3C/g%3E%3C/svg%3E")}
+body.brand-ayu{--batik:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96'%3E%3Cg fill='none' stroke='%236D3B8A' stroke-width='1.5' opacity='.38'%3E%3Cpath d='M48 6l14 28 28 14-28 14-14 28-14-28L6 48l28-14z'/%3E%3C/g%3E%3C/svg%3E")}
+body.brand-urip{--batik:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cg fill='none' stroke='%23145A32' stroke-width='2' opacity='.34'%3E%3Cpath d='M0 8h40M0 20h40M0 32h40'/%3E%3C/g%3E%3C/svg%3E")}
+
+/* ==========================================================================
+   2. DASAR
+   ========================================================================== */
+*,*:before,*:after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font:var(--body.font);font-size:calc(17px * var(--text-scale));line-height:1.7;
+  -webkit-font-smoothing:antialiased;overflow-x:clip;text-rendering:optimizeLegibility;
+}
+body:before{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:var(--batik);background-size:120px 120px;opacity:.055;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--brand);text-decoration:none;text-underline-offset:3px}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4,h5{font-family:var(--ff-display);color:var(--heading.color);line-height:1.16;margin:0 0 .55em;letter-spacing:-.012em;font-weight:600}
+h1{font-size:calc(clamp(1.9rem,1.1rem + 2.9vw,3.3rem) * var(--text-scale))}
+h2{font-size:calc(clamp(1.5rem,1.05rem + 1.7vw,2.35rem) * var(--text-scale))}
+h3{font-size:calc(clamp(1.2rem,1rem + .8vw,1.55rem) * var(--text-scale))}
+h4{font-size:calc(1.08rem * var(--text-scale))}
+p{margin:0 0 1.1em}
+p:last-child{margin-bottom:0}
+ul,ol{margin:0 0 1.15em;padding-left:1.35em}
+li{margin-bottom:.5em}
+hr{border:0;border-top:1px dashed var(--line);margin:2rem 0}
+blockquote{margin:1.6rem 0;padding:20px 26px;border-left:4px solid var(--accent);background:var(--surface);border-radius:0 var(--radius) var(--radius) 0;font-family:var(--ff-display);font-size:calc(1.14rem * var(--text-scale));line-height:1.55;box-shadow:var(--shadow)}
+code,kbd,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.92em}
+code{background:var(--brand-soft);color:var(--brand-deep);padding:.16em .46em;border-radius:6px}
+pre{background:#0F1F1A;color:#E6F1EC;padding:20px;border-radius:var(--radius-s);overflow:auto;line-height:1.6}
+pre code{background:none;color:inherit;padding:0}
+table{border-collapse:collapse;width:100%;margin:1.2rem 0;font-size:calc(0.97rem * var(--text-scale))}
+th,td{border:1px solid var(--line);padding:11px 14px;text-align:left;vertical-align:top}
+th{background:var(--surface-2);font-weight:700}
+figure{margin:0 0 1.3em}
+figcaption{font-size:calc(0.9rem * var(--text-scale));color:var(--muted);margin-top:.6em;text-align:center}
+::selection{background:var(--brand);color:#fff}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);border:0}
+.skip{position:absolute;left:12px;top:-60px;z-index:99;background:var(--brand);color:#fff;padding:12px 18px;border-radius:0 0 12px 12px;font-weight:700;transition:top .2s}
+.skip:focus{top:0;text-decoration:none}
+
+/* ==========================================================================
+   3. KERANGKA
+   ========================================================================== */
+.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad);position:relative;z-index:1}
+.fw-shell{position:relative;z-index:1;display:block}
+.fw-main{display:grid;grid-template-columns:minmax(0,1fr) 348px;gap:clamp(22px,3vw,44px);padding-block:clamp(28px,4vw,60px)}
+.fw-col-main{min-width:0}
+.fw-side{min-width:0}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(14px,2vw,24px)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(18px,2.4vw,28px);position:relative;overflow:hidden}
+.card:hover{box-shadow:var(--shadow-2)}
+.chip{display:inline-flex;align-items:center;gap:7px;padding:6px 13px;border-radius:999px;background:var(--brand-soft);color:var(--brand-deep);font-size:calc(0.9rem * var(--text-scale));font-weight:700;letter-spacing:.02em;border:1px solid transparent}
+.chip.gold{background:var(--accent-soft);color:#7A5A11;border-color:color-mix(in srgb,var(--accent) 34%,transparent)}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:calc(0.9rem * var(--text-scale));font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--brand-deep);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 15px;margin-bottom:16px}
+.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:13px 24px;border-radius:calc(var(--radius) - 6px);background:linear-gradient(135deg,var(--brand),var(--brand-deep));color:#fff;font-weight:700;font-size:calc(0.97rem * var(--text-scale));border:1px solid transparent;cursor:pointer;box-shadow:0 12px 26px color-mix(in srgb,var(--brand) 26%,transparent);transition:transform .22s var(--ease),box-shadow .22s,filter .22s;text-decoration:none}
+.btn:hover{transform:translateY(-2px);box-shadow:0 18px 34px color-mix(in srgb,var(--brand) 32%,transparent);text-decoration:none}
+.btn.ghost{background:transparent;color:var(--brand-deep);border-color:var(--line-strong);box-shadow:none}
+.btn.ghost:hover{background:var(--brand-soft)}
+.btn.gold{background:linear-gradient(135deg,var(--accent),#8f6a15);box-shadow:0 12px 26px color-mix(in srgb,var(--accent) 30%,transparent);color:#1d1607}
+
+/* ==========================================================================
+   4. HEADER / NAVIGASI
+   ========================================================================== */
+.fw-topbar{background:linear-gradient(100deg,var(--brand-deep),var(--brand) 130%);color:#fff;position:relative;z-index:3}
+.fw-topbar .wrap{display:flex;gap:14px;align-items:center;justify-content:space-between;min-height:44px;font-size:calc(0.9rem * var(--text-scale));flex-wrap:wrap;padding-block:8px}
+.fw-topbar a{color:#fff;opacity:.92;text-decoration:none;font-weight:600}
+.fw-topbar a:hover{opacity:1;text-decoration:underline}
+.fw-topbar .dot{width:8px;height:8px;border-radius:50%;background:#7CE0A6;box-shadow:0 0 0 4px rgba(124,224,166,.28);display:inline-block;animation:pulse 2.6s infinite}
+.fw-topbar .tb-r{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+header.fw-head{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:blur(14px) saturate(1.4);border-bottom:1px solid transparent;transition:box-shadow .3s,border-color .3s,background .3s}
+header.fw-head.stuck{border-bottom-color:var(--line);box-shadow:0 10px 30px rgba(20,33,28,.07)}
+.head-in{display:flex;align-items:center;gap:clamp(14px,2.5vw,34px);min-height:var(--head-h)}
+.brandmark{display:flex;align-items:center;gap:13px;text-decoration:none;color:inherit;flex:none}
+.brandmark:hover{text-decoration:none}
+.logo{width:46px;height:46px;border-radius:14px;background:linear-gradient(140deg,var(--brand),var(--accent));display:grid;place-items:center;color:#fff;font-family:var(--ff-display);font-weight:700;font-size:19px;box-shadow:0 10px 22px color-mix(in srgb,var(--brand) 30%,transparent);flex:none}
+.brandmark b{display:block;font-family:var(--ff-display);font-size:calc(1.2rem * var(--text-scale));line-height:1.15;letter-spacing:-.01em}
+.brandmark small{display:block;color:var(--muted);font-size:calc(0.9rem * var(--text-scale));letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+nav.fw-nav{margin-left:auto}
+nav.fw-nav ul{display:flex;gap:clamp(6px,1.4vw,18px);list-style:none;margin:0;padding:0;align-items:center}
+nav.fw-nav a{display:block;padding:10px 12px;border-radius:12px;font-weight:600;font-size:calc(0.96rem * var(--text-scale));color:var(--ink-soft);position:relative;transition:color .2s,background .2s}
+nav.fw-nav a:hover{color:var(--brand);background:var(--brand-soft);text-decoration:none}
+nav.fw-nav a.current{color:var(--brand-deep);background:var(--brand-soft)}
+nav.fw-nav a.current:after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:2px;border-radius:2px;background:var(--accent)}
+.head-cta{display:flex;gap:10px;align-items:center;flex:none}
+.menu-btn{display:none;width:48px;height:48px;border-radius:14px;border:1px solid var(--line-strong);background:var(--surface);cursor:pointer;place-items:center}
+.menu-btn span{display:block;width:20px;height:2px;background:var(--ink);border-radius:2px;position:relative;transition:.25s}
+.menu-btn span:before,.menu-btn span:after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--ink);border-radius:2px;transition:.25s}
+.menu-btn span:before{top:-6px}.menu-btn span:after{top:6px}
+.progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--brand),var(--accent));z-index:60;width:0;transition:width .1s linear}
+
+/* ==========================================================================
+   5. BAND / HERO
+   ========================================================================== */
+.fw-band{position:relative;overflow:hidden;background:linear-gradient(165deg,var(--brand-soft),var(--bg) 62%);padding-block:clamp(30px,5vw,68px);border-bottom:1px solid var(--line)}
+.fw-band:before{content:"";position:absolute;inset:0;background-image:var(--batik);background-size:150px;opacity:.14;pointer-events:none}
+.fw-band:after{content:"";position:absolute;width:520px;height:520px;right:-140px;top:-200px;border-radius:50%;background:radial-gradient(circle at 50% 50%,color-mix(in srgb,var(--accent) 40%,transparent),transparent 62%);pointer-events:none;animation:floaty 16s ease-in-out infinite}
+.fw-band .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(20px,3.4vw,48px);align-items:center}
+.fw-band.solo .wrap{grid-template-columns:1fr;justify-items:start;text-align:left}
+.fw-band h1,.fw-band h2{margin-bottom:14px}
+.fw-band .lead{font-size:calc(1.1rem * var(--text-scale));color:var(--ink-soft);max-width:60ch;margin-bottom:24px}
+.fw-band .media{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-2);border:1px solid var(--line);background:var(--surface)}
+.fw-band .media img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.band-actions{display:flex;gap:12px;flex-wrap:wrap}
+.band-note{display:flex;gap:10px;align-items:center;margin-top:20px;color:var(--muted);font-size:calc(0.93rem * var(--text-scale))}
+.band-note b{color:var(--brand-deep)}
+.avatar-row{display:flex}
+.avatar-row img{width:40px;height:40px;border-radius:50%;border:2px solid var(--surface);object-fit:cover;margin-left:-12px}
+.avatar-row img:first-child{margin-left:0}
+
+/* ==========================================================================
+   6. DAFTAR ENTRI (INDEX / LABEL / ARSIP)
+   ========================================================================== */
+.sec-title{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:24px;flex-wrap:wrap}
+.sec-title p{color:var(--muted);margin:0;max-width:56ch}
+.fw-posts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2.2vw,26px)}
+.post-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s var(--ease),box-shadow .3s,border-color .3s;box-shadow:0 1px 0 rgba(20,33,28,.02)}
+.post-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-2);border-color:color-mix(in srgb,var(--brand) 32%,var(--line))}
+.post-card .thumb{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--surface-2)}
+.post-card .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.post-card:hover .thumb img{transform:scale(1.05)}
+.post-card .thumb .chip{position:absolute;left:14px;top:14px;background:var(--surface);box-shadow:var(--shadow)}
+.post-card .body{padding:clamp(18px,2vw,24px);display:flex;flex-direction:column;gap:12px;flex:1}
+.post-card h3{margin:0;font-size:calc(clamp(1.16rem,1rem + .5vw,1.42rem) * var(--text-scale));line-height:1.3}
+.post-card h3 a{color:inherit;text-decoration:none}
+.post-card h3 a:hover{color:var(--brand)}
+.post-card .snip{color:var(--ink-soft);margin:0;font-size:calc(0.98rem * var(--text-scale))}
+.post-card .meta{display:flex;gap:12px;align-items:center;color:var(--muted);font-size:calc(0.9rem * var(--text-scale));flex-wrap:wrap;margin-top:auto;padding-top:6px;border-top:1px dashed var(--line)}
+.post-card .meta .av{width:30px;height:30px;border-radius:50%;object-fit:cover}
+.post-card.feature{grid-column:span 2;flex-direction:row}
+.post-card.feature .thumb{aspect-ratio:auto;flex:1.1;min-height:280px}
+.post-card.feature .body{flex:1;justify-content:center;padding:clamp(20px,3vw,38px)}
+.post-card.feature h3{font-size:calc(clamp(1.4rem,1rem + 1.3vw,2.1rem) * var(--text-scale))}
+.readmore{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:calc(0.92rem * var(--text-scale));color:var(--brand-deep)}
+.readmore:after{content:"\2192";transition:transform .2s}
+.post-card:hover .readmore:after{transform:translateX(4px)}
+.pager{display:flex;justify-content:space-between;gap:12px;margin:34px 0 6px;flex-wrap:wrap}
+.pager a{display:inline-flex;align-items:center;gap:9px;padding:13px 20px;border-radius:calc(var(--radius) - 8px);border:1px solid var(--line-strong);background:var(--surface);font-weight:700;color:var(--ink);transition:.2s}
+.pager a:hover{background:var(--brand);color:#fff;border-color:transparent;text-decoration:none}
+
+/* ==========================================================================
+   7. HALAMAN ENTRI TUNGGAL
+   ========================================================================== */
+.post-single{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:clamp(20px,3.6vw,54px);position:relative;overflow:hidden}
+.post-single:before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:linear-gradient(90deg,var(--brand),var(--accent),var(--brand))}
+.post-single h1.post-title{font-size:calc(clamp(1.85rem,1.15rem + 2.3vw,2.9rem) * var(--text-scale));line-height:1.14;margin-bottom:16px}
+.post-byline{display:flex;gap:14px;align-items:center;flex-wrap:wrap;color:var(--muted);font-size:calc(0.9rem * var(--text-scale));padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:26px}
+.post-byline b{color:var(--ink);font-size:calc(0.98rem * var(--text-scale))}
+.post-byline .sep{width:4px;height:4px;border-radius:50%;background:var(--line-strong)}
+.post-thumb{border-radius:var(--radius);overflow:hidden;margin-bottom:26px;border:1px solid var(--line)}
+.post-body{font-size:calc(1.06rem * var(--text-scale));line-height:1.82;color:var(--ink-soft);overflow-wrap:break-word}
+.post-body h2{margin-top:1.9em;position:relative;padding-left:16px}
+.post-body h2:before{content:"";position:absolute;left:0;top:.22em;bottom:.22em;width:4px;border-radius:4px;background:linear-gradient(var(--brand),var(--accent))}
+.post-body h3{margin-top:1.6em}
+.post-body img{border-radius:var(--radius-s);margin:1.4em auto;border:1px solid var(--line)}
+.post-body a{text-decoration:underline;border-bottom:2px solid color-mix(in srgb,var(--accent) 55%,transparent)}
+.post-body ul li::marker,.post-body ol li::marker{color:var(--accent)}
+.post-body .separator,.post-body .tr-caption-container{margin:1.5em 0}
+.post-body blockquote p{margin:0}
+.post-labels{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 0;padding-top:22px;border-top:1px solid var(--line)}
+.fw-share{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.fw-share a{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border-radius:12px;border:1px solid var(--line-strong);background:var(--surface);font-weight:600;font-size:calc(0.9rem * var(--text-scale));color:var(--ink)}
+.fw-share a:hover{background:var(--brand);color:#fff;border-color:transparent;text-decoration:none}
+.author-box{display:flex;gap:16px;align-items:flex-start;background:var(--surface-2);border:1px solid var(--line);border-radius:var(--radius);padding:20px;margin-top:26px}
+.author-box img{width:62px;height:62px;border-radius:50%;object-fit:cover;flex:none;border:3px solid var(--surface);box-shadow:var(--shadow)}
+.author-box h4{margin:0 0 4px}
+.author-box p{margin:0;font-size:calc(0.95rem * var(--text-scale));color:var(--muted)}
+
+/* ==========================================================================
+   8. SIDEBAR & WIDGET
+   ========================================================================== */
+.widget{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(16px,2vw,22px);margin-bottom:clamp(16px,2vw,24px);box-shadow:0 1px 0 rgba(20,33,28,.02)}
+.widget h2,.widget h3,.widget .title{font-family:var(--ff-display);font-size:calc(1.12rem * var(--text-scale));margin:0 0 14px;padding-bottom:10px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:9px;color:var(--heading.color)}
+.widget h2:before,.widget .title:before{content:"";width:9px;height:9px;border-radius:3px;background:linear-gradient(140deg,var(--brand),var(--accent));flex:none}
+.widget ul{list-style:none;margin:0;padding:0}
+.widget li{padding:9px 0;border-bottom:1px dashed var(--line);font-size:calc(0.96rem * var(--text-scale))}
+.widget li:last-child{border-bottom:0}
+.widget li a{display:flex;gap:9px;align-items:flex-start;color:var(--ink)}
+.widget li a:hover{color:var(--brand);text-decoration:none}
+.widget .list-label li:before{content:"\203A";color:var(--accent);font-weight:800}
+.widget .flat li a:before{content:""}
+.PopularPosts .item-thumbnail img{width:64px;height:64px;border-radius:12px;object-fit:cover}
+.PopularPosts .popular-item{display:flex;gap:12px;align-items:flex-start}
+.PopularPosts .popular-title{font-weight:700;line-height:1.35;font-size:calc(0.95rem * var(--text-scale))}
+.PopularPosts .popular-snippet{color:var(--muted);font-size:calc(0.9rem * var(--text-scale))}
+.Label .list-label a{display:inline-flex;padding:7px 14px;border-radius:999px;background:var(--brand-soft);color:var(--brand-deep);font-weight:600;margin:0 8px 8px 0;font-size:calc(0.9rem * var(--text-scale))}
+.Label .list-label li{display:inline-block;border:0;padding:0}
+.Label .list-label a:hover{background:var(--brand);color:#fff}
+.cloud-label .counter{opacity:.7;font-weight:600}
+.Profile .profile-name{font-weight:800}
+div.widget .widget-content{font-size:calc(0.97rem * var(--text-scale))}
+.statswidget{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.stats-count{font-family:var(--ff-display);font-size:1.7rem;color:var(--brand-deep)}
+.fw-cta{background:linear-gradient(160deg,var(--brand),var(--brand-deep));color:#fff;border:0}
+.fw-cta:before{content:"";position:absolute;inset:0;background-image:var(--batik);background-size:110px;opacity:.16;pointer-events:none}
+.fw-cta{position:relative;overflow:hidden}
+.fw-cta h2,.fw-cta h3,.fw-cta .title{color:#fff;border-bottom-color:rgba(255,255,255,.24)}
+.fw-cta h2:before,.fw-cta .title:before{background:var(--accent)}
+.fw-cta .widget-content,.fw-cta p,.fw-cta li,.fw-cta a{color:#fff}
+.fw-cta a.btn{background:#fff;color:var(--brand-deep);border:0}
+.fw-cta li{border-bottom-color:rgba(255,255,255,.18)}
+.fw-soft{background:var(--surface-2)}
+.fw-quote{font-family:var(--ff-display);font-size:calc(1.08rem * var(--text-scale));line-height:1.5;color:var(--brand-deep)}
+
+/* ==========================================================================
+   9. KOMENTAR
+   ========================================================================== */
+#comments{margin-top:clamp(26px,4vw,48px);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(18px,3vw,34px)}
+#comments h3,.comments-title{font-size:calc(1.2rem * var(--text-scale));margin:0 0 6px}
+.comments .comments-content{margin:0;padding:0}
+.comments .comment{list-style:none;padding:18px 0;border-bottom:1px dashed var(--line)}
+.comments .comment:last-child{border-bottom:0}
+.comments .comment-header{display:flex;gap:10px;align-items:center;font-size:calc(0.9rem * var(--text-scale));color:var(--muted);margin-bottom:6px}
+.comments .comment-header .user{font-weight:800;color:var(--ink);font-size:calc(0.98rem * var(--text-scale))}
+.comments .comment-block{padding-left:0!important}
+.comments .comment-body,.comment-body{color:var(--ink-soft);font-size:calc(1rem * var(--text-scale));line-height:1.7}
+.comments .avatar-image-container{width:42px;height:42px;border-radius:50%;overflow:hidden;border:2px solid var(--surface);box-shadow:var(--shadow);flex:none}
+.comments .avatar-image-container img{width:100%;height:100%;object-fit:cover}
+.comments .comment-actions a{font-size:calc(0.9rem * var(--text-scale));font-weight:700}
+.comment-link-item{display:flex;gap:12px;align-items:flex-start}
+#comment-editor{width:100%;border-radius:var(--radius-s);border:1px solid var(--line-strong);padding:14px;min-height:130px;font:inherit;background:var(--surface-2)}
+.comment-form{margin-top:18px}
+.comment-form label{display:block;font-weight:700;font-size:calc(0.9rem * var(--text-scale));margin-bottom:6px}
+.comment-form input[type=text]{width:100%;padding:13px 14px;border-radius:var(--radius-s);border:1px solid var(--line-strong);background:var(--surface-2);font:inherit;margin-bottom:12px}
+.deleted-comment{font-style:italic;color:var(--muted)}
+
+/* ==========================================================================
+   10. FOOTER
+   ========================================================================== */
+footer.fw-foot{margin-top:clamp(34px,6vw,80px);position:relative;overflow:hidden;color:rgba(255,255,255,.86);background:linear-gradient(165deg,var(--brand-deep),#0b1512 112%)}
+footer.fw-foot:before{content:"";position:absolute;inset:0;background-image:var(--batik);background-size:130px;opacity:.13;pointer-events:none}
+.foot-top{position:relative;z-index:1;display:grid;grid-template-columns:1.4fr .9fr .9fr 1.1fr;gap:clamp(20px,3vw,40px);padding-block:clamp(30px,4vw,58px)}
+.foot-top h4{color:#fff;font-family:var(--ff-body);font-size:calc(0.9rem * var(--text-scale));letter-spacing:.18em;text-transform:uppercase;margin:0 0 14px;opacity:.72;font-weight:800}
+.foot-top a{color:rgba(255,255,255,.86);display:block;padding:5px 0;font-size:calc(0.95rem * var(--text-scale))}
+.foot-top a:hover{color:#fff;text-decoration:underline}
+.foot-top p{font-size:calc(0.95rem * var(--text-scale));color:rgba(255,255,255,.76)}
+.fbrand b{font-family:var(--ff-display);color:#fff;font-size:calc(1.3rem * var(--text-scale));display:block;margin-bottom:10px}
+.quotebox{border-left:3px solid var(--accent);padding-left:14px;font-family:var(--ff-display);font-style:italic;color:rgba(255,255,255,.9);margin-top:16px}
+.news{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.news input{flex:1;min-width:170px;padding:13px 15px;border-radius:12px;border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.08);color:#fff;font:inherit;font-size:calc(0.95rem * var(--text-scale))}
+.news input::placeholder{color:rgba(255,255,255,.6)}
+.news button{border:0;border-radius:12px;padding:13px 20px;background:var(--accent);color:#241a03;font-weight:800;cursor:pointer;font-family:var(--ff-body);font-size:calc(0.93rem * var(--text-scale));transition:.2s}
+.news button:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.social{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.social a{width:44px;height:44px;border-radius:13px;border:1px solid rgba(255,255,255,.2);display:grid;place-items:center;background:rgba(255,255,255,.07);padding:0}
+.social a:hover{background:#fff;color:var(--brand-deep);text-decoration:none}
+.social svg{width:19px;height:19px;fill:currentColor}
+.foot-bottom{position:relative;z-index:1;border-top:1px solid rgba(255,255,255,.14);padding:18px 0 30px;display:flex;gap:12px;justify-content:space-between;align-items:center;flex-wrap:wrap;font-size:calc(0.9rem * var(--text-scale));color:rgba(255,255,255,.7)}
+.foot-bottom a{color:#fff;font-weight:700}
+.cred{display:inline-flex;align-items:center;gap:8px}
+.cred .mark{width:24px;height:24px;border-radius:8px;background:linear-gradient(140deg,var(--accent),#fff);display:grid;place-items:center;color:#20160a;font-weight:900;font-size:12px;font-family:var(--ff-display)}
+.attribution{margin-top:4px;font-size:calc(0.9rem * var(--text-scale));opacity:.7}
+.attribution a{display:inline;color:inherit}
+
+/* ==========================================================================
+   11. MOTIF & ANIMASI
+   ========================================================================== */
+@keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(124,224,166,.26)}50%{box-shadow:0 0 0 9px rgba(124,224,166,0)}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-22px)}}
+@keyframes riseIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.post-card,.widget,.card{animation:riseIn .6s var(--ease) both}
+.widget:nth-of-type(2){animation-delay:.08s}
+.widget:nth-of-type(3){animation-delay:.16s}
+.widget:nth-of-type(4){animation-delay:.24s}
+html.reduced *,html.reduced *:before,html.reduced *::after{animation:none!important;transition:none!important}
+html.reduced .reveal{opacity:1;transform:none}
+
+/* ==========================================================================
+   12. RESPONSIF (mobile-first tambalan)
+   ========================================================================== */
+@media (max-width:1180px){
+  .fw-main{grid-template-columns:minmax(0,1fr) 312px}
+  .foot-top{grid-template-columns:1.2fr 1fr 1fr}
+  .foot-top .news-col{grid-column:1/-1}
+}
+@media (max-width:1024px){
+  .fw-main{grid-template-columns:1fr}
+  .fw-side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(14px,2vw,22px);align-items:start}
+  .fw-side .widget{margin-bottom:0}
+  nav.fw-nav{position:fixed;inset:var(--head-h) 0 auto;background:var(--surface);border-bottom:1px solid var(--line);box-shadow:var(--shadow-2);padding:12px var(--pad) 22px;margin:0;transform:translateY(-130%);transition:transform .34s var(--ease);z-index:29;max-height:calc(100vh - var(--head-h));overflow:auto}
+  body.nav-open nav.fw-nav{transform:none}
+  nav.fw-nav ul{flex-direction:column;align-items:stretch;gap:2px}
+  nav.fw-nav a{padding:15px 14px;font-size:calc(1.05rem * var(--text-scale));border-bottom:1px solid var(--line)}
+  nav.fw-nav a.current{background:var(--brand-soft)}
+  .menu-btn{display:grid}
+  .head-cta .btn{display:none}
+  .fw-band .wrap{grid-template-columns:1fr}
+  .fw-band .media{order:-1;max-width:520px}
+  .post-card.feature{flex-direction:column}
+  .post-card.feature .thumb{min-height:0;aspect-ratio:16/9}
+  .post-card.feature{grid-column:span 2}
+}
+@media (max-width:760px){
+  :root{--head-h:64px;--sec:52px}
+  body{font-size:calc(16.5px * var(--text-scale));line-height:1.72}
+  .fw-posts{grid-template-columns:1fr}
+  .post-card.feature{grid-column:auto}
+  .fw-side{grid-template-columns:1fr}
+  .grid2{grid-template-columns:1fr}
+  .foot-top{grid-template-columns:1fr;gap:26px}
+  .fw-topbar .wrap{justify-content:center;text-align:center;gap:8px}
+  .fw-topbar .tb-r{justify-content:center}
+  .post-single{padding:20px 16px;border-radius:var(--radius)}
+  .post-body{font-size:calc(1.03rem * var(--text-scale))}
+  .brandmark b{font-size:calc(1.05rem * var(--text-scale))}
+  .brandmark small{display:none}
+  .logo{width:42px;height:42px;border-radius:12px}
+  .band-actions .btn{flex:1}
+  .pager a{flex:1;justify-content:center}
+  table{display:block;overflow-x:auto;white-space:nowrap}
+}
+@media (max-width:420px){
+  .fw-share a{flex:1;justify-content:center}
+  .avatar-row img{width:34px;height:34px}
+}
+@media (hover:none){
+  .post-card:hover{transform:none}
+  .post-card:hover .thumb img{transform:none}
+}
+@media print{
+  .fw-topbar,header.fw-head,footer.fw-foot,.fw-side,.pager,.fw-share,#comments,.skip,.progress{display:none!important}
+  .fw-main{grid-template-columns:1fr}
+  .post-single{border:0;box-shadow:none;padding:0}
+  body{background:#fff;color:#000;font-size:12pt}
+  .post-body a{color:#000;text-decoration:underline}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*:before,*:after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+}
+]]></b:skin>
+
+<style id='fw-extra'>/* lapisan tambahan Firman Web */
+.fw-band .thumb,.post-card .thumb.fallback{background:linear-gradient(150deg,var(--brand-soft),var(--accent-soft));position:relative;display:grid;place-items:center;min-height:190px}
+.post-card .thumb.fallback:after{content:"Firman Web";font-family:var(--ff-display);font-size:1.15rem;color:var(--brand-deep);opacity:.55;letter-spacing:.04em}
+.post-card .thumb.fallback:before{content:"";position:absolute;inset:0;background-image:var(--batik);background-size:96px;opacity:.5}
+.fw-side .widget .widget-content ul{list-style:none;margin:0;padding:0}
+.archive-year{font-weight:800;margin:12px 0 4px;font-size:calc(0.92rem * var(--text-scale));color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.fw-side li.sub{padding-left:14px;font-size:calc(0.92rem * var(--text-scale))}
+.aatb{display:inline-flex;gap:6px;align-items:center;border:1px solid rgba(255,255,255,.24);border-radius:10px;padding:7px 11px;background:rgba(255,255,255,.08);color:#fff;font:inherit;font-size:calc(0.9rem * var(--text-scale));font-weight:700;cursor:pointer}
+.aatb.on{background:var(--accent);color:#241a03;border-color:transparent}
+.aatb:hover{text-decoration:none;filter:brightness(1.06)}
+.fw-empty{padding:clamp(24px,5vw,54px);text-align:center;border:1px dashed var(--line-strong);border-radius:var(--radius);background:var(--surface)}
+.fw-empty h3{margin-bottom:8px}
+.contact-card{display:grid;gap:10px}
+.contact-card a{justify-content:center}
+.tag-list{display:flex;flex-wrap:wrap;gap:8px}
+.mb0{margin-bottom:0}
+.muted{opacity:.82}
+.num{font-variant-numeric:tabular-nums;font-weight:800}
+.tb-l{display:inline-flex;align-items:center;gap:9px}
+.blog-wrap{min-width:0}
+.below-post{margin-top:clamp(18px,3vw,30px)}
+.fw-side .widget,.sticky-side .widget{scroll-margin-top:96px}
+.popular-items .popular-item+.popular-item{border-top:1px dashed var(--line);padding-top:12px;margin-top:12px}
+.popular-items .popular-title{display:block;color:var(--ink);font-weight:700;line-height:1.4}
+.popular-items .popular-title:hover{color:var(--brand)}
+#main,.fw-col-main{scroll-margin-top:90px}
+#contact{scroll-margin-top:90px}
+.fw-foot .widget{background:transparent;border:0;box-shadow:none;padding:0;margin:0;color:inherit;overflow:visible}
+.fw-foot .widget h2,.fw-foot .widget .title{color:#fff;border-bottom:0;font-family:var(--ff-body);font-size:calc(0.9rem * var(--text-scale));letter-spacing:.18em;text-transform:uppercase;opacity:.78;padding:0}
+.fw-foot .widget h2:before,.fw-foot .widget .title:before{background:var(--accent);width:7px;height:7px}
+.fw-foot .widget li{border-bottom-color:rgba(255,255,255,.13)}
+.fw-foot .widget li a{padding:5px 0;color:rgba(255,255,255,.86)}
+.fw-foot .widget li a:hover{color:#fff}
+.fw-foot .widget .widget-content,.fw-foot .widget p{color:rgba(255,255,255,.8)}
+.fw-foot .widget a{color:rgba(255,255,255,.9)}
+.fw-foot .news{margin-top:4px}
+</style>
+</head>
+<body expr:class='"brand-" + data:skin.vars.brandMode'>
+<a class='skip' href='#main'>Lompat ke isi utama</a>
+<div aria-hidden='true' class='progress' id='progress'></div>
+<div class='fw-shell'>
+
+  <!-- ===================== TOPBAR ===================== -->
+  <div class='fw-topbar'>
+    <div class='wrap'>
+      <span class='tb-l'><span class='dot' aria-hidden='true'></span> <data:blog.title/> &#183; bagian dari Jaringan Digital Nusantara</span>
+      <b:section class='tb-r' id='topbar' maxwidgets='2' showaddelement='yes'>
+        <b:widget id='HTML1' locked='false' title='Status Jaringan' type='HTML' version='2' visible='true'>
+          <b:widget-settings>
+            <b:widget-setting name='content'>&lt;a href="#artikel"&gt;Artikel Terbaru&lt;/a&gt; &lt;a href="https://wa.me/6281234567890" target="_blank" rel="noopener"&gt;0812-3456-7890&lt;/a&gt; &lt;a href="#contact"&gt;Kirim Pertanyaan&lt;/a&gt;</b:widget-setting>
+          </b:widget-settings>
+          <b:includable id='main' var='this'>
+            <div class='widget-content'><data:content/></div>
+          </b:includable>
+        </b:widget>
+      </b:section>
+    </div>
+  </div>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class='fw-head' id='fwHead'>
+    <div class='wrap head-in'>
+      <b:section id='header' maxwidgets='1' showaddelement='no'>
+        <b:widget id='Header1' locked='true' title='Logo &amp; Judul Blog' type='Header' version='2' visible='true'>
+          <b:widget-settings>
+            <b:widget-setting name='imagePlacement'>BEHIND</b:widget-setting>
+            <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
+          </b:widget-settings>
+          <b:includable id='main' var='this'>
+            <a class='brandmark' expr:href='data:blog.homepageUrl'>
+              <span class='logo' aria-hidden='true'><b:eval expr='snippet(data:blog.title, {length: 1, links: false, ellipsis: false})'/></span>
+              <span>
+                <b:if cond='data:view.isHomepage'>
+                  <b><data:blog.title/></b>
+                <b:else/>
+                  <a expr:href='data:blog.homepageUrl'><data:blog.title/></a>
+                </b:if>
+                <b:if cond='data:blog.description'>
+                  <small><data:blog.description/></small>
+                <b:else/>
+                  <small>Desain Web oleh Firman Web</small>
+                </b:if>
+              </span>
+            </a>
+          </b:includable>
+        </b:widget>
+      </b:section>
+
+      <b:section class='fw-nav' id='navigation' maxwidgets='1' showaddelement='no'>
+        <b:widget id='PageList1' locked='false' title='Navigasi Situs' type='PageList' version='2' visible='true'>
+          <b:includable id='main' var='this'>
+            <nav aria-label='Navigasi utama'>
+              <ul>
+                <li><a class='current' expr:href='data:blog.homepageUrl'>Beranda</a></li>
+                <b:loop values='data:links' var='link'>
+                  <li><a expr:class='data:link.target == data:blog.canonicalUrl ? "current" : ""' expr:href='data:link.target'><data:link.name/></a></li>
+                </b:loop>
+              </ul>
+            </nav>
+          </b:includable>
+        </b:widget>
+      </b:section>
+
+      <div class='head-cta'>
+        <a class='btn' href='https://wa.me/6281234567890' rel='noopener' target='_blank'>Konsultasi</a>
+        <button aria-controls='navigation' aria-expanded='false' class='menu-btn' id='menuBtn' type='button'><span></span><span class='sr-only'>Buka menu</span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== BAND / HERO ===================== -->
+  <b:if cond='data:view.isHomepage'>
+    <section class='fw-band' id='band'>
+      <div class='wrap'>
+        <div>
+          <span class='eyebrow'><i></i> Publikasi Jaringan Nusantara</span>
+          <h1><data:blog.title/></h1>
+          <b:if cond='data:blog.description'>
+            <p class='lead'><data:blog.description/></p>
+          <b:else/>
+            <p class='lead'>Catatan lapangan seputar pelatihan kecantikan, weddings adat, organisasi perias, dan ekonomi kerakyatan — ditulis langsung oleh tim yang mengerjakannya.</p>
+          </b:if>
+          <div class='band-actions'>
+            <a class='btn' href='#main'>Baca Artikel Terbaru</a>
+            <a class='btn ghost' href='#contact'>Hubungi Tim</a>
+          </div>
+          <div class='band-note'>
+            <span class='avatar-row' aria-hidden='true'>
+              <img alt='' loading='lazy' src='https://images.pexels.com/photos/35367136/pexels-photo-35367136.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=120&amp;h=120&amp;fit=crop'/>
+              <img alt='' loading='lazy' src='https://images.pexels.com/photos/17373113/pexels-photo-17373113.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=120&amp;h=120&amp;fit=crop'/>
+              <img alt='' loading='lazy' src='https://images.pexels.com/photos/13535267/pexels-photo-13535267.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=120&amp;h=120&amp;fit=crop'/>
+            </span>
+            <span>Dikelola tim redaksi <b><data:blog.title/></b> · <span class='num'>1×24 jam</span> respons pertanyaan</span>
+          </div>
+        </div>
+        <div class='media'>
+          <img alt='Calon pengantin Jawa sedang dirias paes oleh perias bersertifikat' decoding='async' loading='eager' src='https://images.pexels.com/photos/8657457/pexels-photo-8657457.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000'/>
+        </div>
+      </div>
+    </section>
+  <b:else/>
+    <section class='fw-band solo'>
+      <div class='wrap'>
+        <span class='eyebrow'><i></i>
+          <b:if cond='data:view.isSearch'>Hasil Pencarian<b:elseif cond='data:view.isLabelSearch'/><b:if cond='data:blog.searchLabel'>Label: <data:blog.searchLabel/></b:if><b:elseif cond='data:view.isArchive'/><b:if cond='data:blog.archive.name'><data:blog.archive.name/></b:if><b:else/>Arsip &amp; Catatan</b:if>
+        </span>
+        <h2>
+          <b:if cond='data:view.isSearch'><b:if cond='data:blog.searchQuery'>&quot;<data:blog.searchQuery/>&quot;</b:if><b:else/><data:blog.pageName/></b:if>
+          <b:if cond='data:view.isLabelSearch'>Laman bertanda <data:blog.searchLabel/></b:if>
+        </h2>
+        <p class='lead'>Menampilkan tulisan yang paling relevan. Gunakan navigasi di atas untuk kembali ke rubrik utama.</p>
+      </div>
+    </section>
+  </b:if>
+
+  <!-- ===================== KONTEN ===================== -->
+  <div class='wrap'>
+    <div class='fw-main'>
+      <div class='fw-col-main'>
+        <b:section id='main' maxwidgets='1' showaddelement='no'>
+        <b:widget id='Blog1' locked='true' title='Entri Blog' type='Blog' version='2' visible='true'>
+          <b:widget-settings>
+            <b:widget-setting name='showDateHeader'>false</b:widget-setting>
+            <b:widget-setting name='showShareButtons'>true</b:widget-setting>
+            <b:widget-setting name='showAuthor'>true</b:widget-setting>
+            <b:widget-setting name='showTimestamp'>true</b:widget-setting>
+            <b:widget-setting name='showLabels'>true</b:widget-setting>
+            <b:widget-setting name='showLocation'>false</b:widget-setting>
+            <b:widget-setting name='showBacklinks'>false</b:widget-setting>
+            <b:widget-setting name='showReactions'>false</b:widget-setting>
+            <b:widget-setting name='showInlineComments'>true</b:widget-setting>
+            <b:widget-setting name='showAuthorProfile'>true</b:widget-setting>
+            <b:widget-setting name='postLabelsLabel'>Rubrik:</b:widget-setting>
+            <b:widget-setting name='authorLabel'>oleh</b:widget-setting>
+            <b:widget-setting name='timestampLabel'>Ditulis</b:widget-setting>
+            <b:widget-setting name='commentLabel'>Komentar</b:widget-setting>
+            <b:widget-setting name='backlinksLabel'>Tautan ke postingan ini</b:widget-setting>
+          </b:widget-settings>
+
+          <b:includable id='main' var='this'>
+            <div class='blog-wrap'>
+              <b:if cond='data:view.isSingleItem'>
+                <b:loop values='data:posts' var='post'><b:include data='post' name='postFull'/></b:loop>
+              <b:else/>
+                <b:include name='index'/>
+              </b:if>
+            </div>
+          </b:includable>
+
+          <b:includable id='index' var='this'>
+            <b:include name='statusMessage'/>
+            <b:if cond='data:posts.empty'>
+              <div class='fw-empty'>
+                <h3>Belum ada tulisan di bagian ini</h3>
+                <p class='muted'>Mulai dengan menulis satu entri di menu <b>Entri &gt; Entri baru</b>, lalu rubah judul rubrik lewat widget Label di sidebar. Kartu di atas akan terisi otomatis.</p>
+                <a class='btn' expr:href='data:blog.homepageUrl'>Segarkan halaman</a>
+              </div>
+            <b:else/>
+              <div expr:class='data:view.isHomepage ? "fw-posts home" : "fw-posts"' id='artikel'>
+                <b:loop values='data:posts' var='post'><b:include data='post' name='postCard'/></b:loop>
+              </div>
+            </b:if>
+            <b:include name='paging'/>
+          </b:includable>
+
+          <b:includable id='postCard' var='post'>
+            <article class='post-card reveal'>
+              <b:if cond='data:post.featuredImage'>
+                <a aria-hidden='true' class='thumb' expr:href='data:post.url' tabindex='-1'>
+                  <img expr:alt='data:post.title' expr:src='resizeImage(data:post.featuredImage, 720, "16:10")' loading='lazy'/>
+                  <b:if cond='data:post.labels'><span class='chip gold'><data:post.labels.first.name/></span></b:if>
+                </a>
+              <b:else/>
+                <a aria-hidden='true' class='thumb fallback' expr:href='data:post.url' tabindex='-1'>
+                  <b:if cond='data:post.labels'><span class='chip gold'><data:post.labels.first.name/></span></b:if>
+                </a>
+              </b:if>
+              <div class='body'>
+                <b:if cond='data:post.date'><span class='chip'><data:post.date/></span></b:if>
+                <h3><a expr:href='data:post.url'><b:eval expr='data:post.title ? data:post.title : "Tanpa judul"'/></a></h3>
+                <p class='snip'><b:eval expr='snippet(data:post.body, {length: 175, links: false, ellipsis: true})'/></p>
+                <div class='meta'>
+                  <b:if cond='data:post.author.authorPhoto.image'><img class='av' expr:alt='data:post.author.name' expr:src='data:post.author.authorPhoto.image' loading='lazy'/></b:if>
+                  <span><b><data:post.author.name/></b></span>
+                  <b:if cond='data:post.allowComments'><span>&#183;</span><a expr:href='data:post.url + "#comments"'><data:post.numberOfComments/> komentar</a></b:if>
+                  <a class='readmore' expr:href='data:post.url'>Baca selengkapnya</a>
+                </div>
+              </div>
+            </article>
+          </b:includable>
+
+          <b:includable id='postFull' var='post'>
+            <article class='post-single' id='post'>
+              <header>
+                <b:if cond='data:post.labels'>
+                  <div class='tag-list'>
+                    <b:loop values='data:post.labels' var='label'><a class='chip' expr:href='data:label.url'><data:label.name/></a></b:loop>
+                  </div>
+                </b:if>
+                <h1 class='post-title'><b:eval expr='data:post.title ? data:post.title : "Tanpa judul"'/></h1>
+                <div class='post-byline'>
+                  <b:if cond='data:post.author.authorPhoto.image'><img alt='' class='av' expr:src='data:post.author.authorPhoto.image' style='width:44px;height:44px;border-radius:50%;object-fit:cover'/></b:if>
+                  <span><b><data:post.author.name/></b></span>
+                  <span class='sep'></span>
+                  <time><b:eval expr='data:post.date ? data:post.date : data:post.timestamp'/></time>
+                  <b:if cond='data:post.allowComments'><span class='sep'></span><a href='#comments'><data:post.numberOfComments/> Komentar</a></b:if>
+                  <b:if cond='data:post.editUrl'><span class='sep'></span><a class='chip gold' expr:href='data:post.editUrl'>Ubah entri</a></b:if>
+                </div>
+              </header>
+              <b:if cond='data:post.featuredImage'>
+                <div class='post-thumb'><img expr:alt='data:post.title' expr:src='resizeImage(data:post.featuredImage, 1280, "16:9")' loading='eager'/></div>
+              </b:if>
+              <div class='post-body'><data:post.body/></div>
+              <b:include data='post' name='postFooter'/>
+              <b:include data='post' name='comments'/>
+            </article>
+            <b:include name='paging'/>
+          </b:includable>
+
+          <b:includable id='postFooter' var='post'>
+            <b:if cond='data:post.labels'>
+              <div class='post-labels'>
+                <span class='chip' style='background:var(--surface-2);color:var(--muted)'>Rubrik</span>
+                <b:loop values='data:post.labels' var='label'><a class='chip' expr:href='data:label.url'><data:label.name/></a></b:loop>
+              </div>
+            </b:if>
+            <b:include data='post' name='shareButtons'/>
+            <b:if cond='data:post.author.aboutMe'>
+              <div class='author-box'>
+                <b:if cond='data:post.author.authorPhoto.image'><img alt='' expr:src='data:post.author.authorPhoto.image'/><b:else/><img alt='' src='https://images.pexels.com/photos/13535267/pexels-photo-13535267.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=140&amp;h=140&amp;fit=crop'/></b:if>
+                <div>
+                  <h4><data:post.author.name/></h4>
+                  <p><b:eval expr='snippet(data:post.author.aboutMe, {length: 260, links: false, ellipsis: true})'/></p>
+                  <a class='readmore' expr:href='data:blog.homepageUrl + "search/label/" + data:post.labels.first.name'>Tulisan lainnya</a>
+                </div>
+              </div>
+            </b:if>
+          </b:includable>
+
+          <b:includable id='shareButtons' var='post'>
+            <div class='fw-share'>
+              <b:if cond='data:blog.pageType != "static_page"'>
+                <a expr:href='"https://api.whatsapp.com/send?text=" + data:post.url' rel='noopener nofollow' target='_blank'>Bagikan di WhatsApp</a>
+                <a expr:href='"https://t.me/share/url?url=" + data:post.url' rel='noopener nofollow' target='_blank'>Telegram</a>
+                <a expr:href='"https://www.facebook.com/sharer/sharer.php?u=" + data:post.url' rel='noopener nofollow' target='_blank'>Facebook</a>
+                <a expr:href='"mailto:?subject=" + data:post.url.escaped' rel='noopener'>Kirim lewat email</a>
+              </b:if>
+              <a expr:href='data:post.url.escaped' rel='noopener'>Salin tautan</a>
+            </div>
+          </b:includable>
+
+          <b:includable id='statusMessage'>
+            <b:if cond='data:blog.searchQuery'>
+              <div class='widget fw-soft'><p class='mb0'>Menampilkan hasil pencarian untuk <b>&quot;<data:blog.searchQuery/>&quot;</b> &#8212; <a expr:href='data:blog.homepageUrl'>kembali ke beranda</a></p></div>
+            </b:if>
+            <b:if cond='data:view.isLabelSearch'>
+              <div class='widget fw-soft'><p class='mb0'>Seluruh tulisan pada rubrik <b><data:blog.searchLabel/></b>. <a expr:href='data:blog.homepageUrl'>Lihat semua rubrik</a></p></div>
+            </b:if>
+          </b:includable>
+
+          <b:includable id='paging'>
+            <div class='pager'>
+              <b:if cond='data:newerPageUrl'><a expr:href='data:newerPageUrl' rel='next'>&#8249; Lebih baru</a></b:if>
+              <a expr:href='data:blog.homepageUrl'>Semua tulisan</a>
+              <b:if cond='data:olderPageUrl'><a expr:href='data:olderPageUrl' rel='prev'>Lebih lama &#8250;</a></b:if>
+            </div>
+          </b:includable>
+
+          <b:includable id='comments' var='post'>
+            <section id='comments'>
+              <b:if cond='data:post.allowComments'>
+                <h3><data:post.numberOfComments/> Komentar &#183; <a href='#comment-form'>Tulis tanggapan</a></h3>
+                <b:if cond='data:post.comments'>
+                  <ol class='comments'>
+                    <b:loop values='data:post.comments' var='comment'>
+                      <li class='comment' expr:id='"c" + data:comment.id'>
+                        <div class='comment-link-item'>
+                          <b:if cond='data:comment.authorAvatarSrc'>
+                            <span class='avatar-image-container'><img alt='' expr:src='data:comment.authorAvatarSrc' height='42' loading='lazy' width='42'/></span>
+                          </b:if>
+                          <div class='comment-block'>
+                            <div class='comment-header'>
+                              <span class='user'><b:eval expr='data:comment.author ? data:comment.author : "Anonim"'/></span>
+                              <span>&#183;</span><span><data:comment.date/></span>
+                            </div>
+                            <div class='comment-body'><data:comment.body/></div>
+                            <div class='comment-actions'>
+                              <a expr:href='data:comment.url' rel='nofollow'>Tautan tetap</a>
+                              <b:if cond='data:comment.isDeleted'><span class='deleted-comment'>&#183; Komentar dihapus</span></b:if>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </b:loop>
+                  </ol>
+                </b:if>
+                <b:include data='post' name='commentForm'/>
+              <b:else/>
+                <b:if cond='data:post.allowComments == false'>
+                  <p class='muted'>Kolom komentar untuk tulisan ini ditutup. Silakan kirim pertanyaan lewat WhatsApp atau email tautan ini.</p>
+                </b:if>
+              </b:if>
+            </section>
+          </b:includable>
+
+          <b:includable id='commentForm' var='post'>
+            <div class='comment-form'>
+              <a name='comment-form'></a>
+              <h4>Tanggapan Anda</h4>
+              <p class='muted' style='font-size:calc(0.9rem * var(--text-scale))'>Komentar dimoderasi. Sertakan nama dan kota bila Anda ingin kami balas lewat email.</p>
+              <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:src='data:post.commentFormIframeSrc' frameborder='0' height='260' id='comment-editor' name='comment-editor' width='100%'></iframe>
+            </div>
+          </b:includable>
+
+          <b:includable id='postQuickEdit' var='post'>
+            <b:if cond='data:post.editUrl'><a class='chip gold' expr:href='data:post.editUrl' rel='noopener nofollow' target='_blank'>Ubah</a></b:if>
+          </b:includable>
+        </b:widget>
+      </b:section>
+        <b:section id='main-2' class='below-post' showaddelement='yes'/>
+      </div>
+      <aside class='fw-side' id='sidebar-area'>
+        <b:section class='sticky-side' id='sidebar' showaddelement='yes'>
+          <b:widget id='HTML2' locked='false' title='Hubungi Tim' type='HTML' version='2' visible='true'>
+            <b:widget-settings>
+              <b:widget-setting name='content'>&lt;p&gt;Konsultasi gratis 20 menit: kuota kelas, paket wedding, keanggotaan asosiasi, atau undangan menjadi narasumber.&lt;/p&gt; &lt;div class="contact-card"&gt; &lt;a class="btn" href="https://wa.me/6281234567890" target="_blank" rel="noopener"&gt;Chat WhatsApp&lt;/a&gt; &lt;a class="btn ghost" href="mailto:halo@lpkpam.com"&gt;Kirim Email&lt;/a&gt; &lt;/div&gt; &lt;p style="margin-top:12px;font-size:.9rem;opacity:.8"&gt;Jl. Imogiri Timur KM 6 No. 88, Bantul, DIY &#183; Senin&#8211;Sabtu 08.00&#8211;16.00&lt;/p&gt;</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main' var='this'>
+              <div class='widget fw-cta' id='contact'>
+                <h2 class='title'><data:title/></h2>
+                <div class='widget-content'><data:content/></div>
+              </div>
+            </b:includable>
+          </b:widget>
+
+          <b:widget id='PopularPosts1' locked='false' title='Tulisan Teratas' type='PopularPosts' version='2' visible='true'>
+            <b:widget-settings>
+              <b:widget-setting name='numItemsToShow'>4</b:widget-setting>
+              <b:widget-setting name='showThumbnails'>true</b:widget-setting>
+              <b:widget-setting name='showSnippets'>true</b:widget-setting>
+              <b:widget-setting name='timeRange'>ALL_TIME</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main' var='this'>
+              <div class='widget'>
+                <b:if cond='data:title'><h2 class='title'><data:title/></h2></b:if>
+                <div class='widget-content popular-items'>
+                  <b:loop values='data:posts' var='post'>
+                    <article class='popular-item'>
+                      <b:if cond='data:post.featuredImage'>
+                        <a class='item-thumbnail' expr:href='data:post.url'><img alt='' expr:src='resizeImage(data:post.featuredImage, 160, "1:1")' loading='lazy'/></a>
+                      <b:else/>
+                        <a class='item-thumbnail' expr:href='data:post.url' style='width:64px;height:64px;border-radius:12px;background:linear-gradient(150deg,var(--brand-soft),var(--accent-soft))'>&#160;</a>
+                      </b:if>
+                      <div>
+                        <a class='popular-title' expr:href='data:post.url'><data:post.title/></a>
+                        <b:if cond='data:showSnippets'><p class='popular-snippet'><b:eval expr='snippet(data:post.body, {length: 92, links: false, ellipsis: true})'/></p></b:if>
+                      </div>
+                    </article>
+                  </b:loop>
+                </div>
+              </div>
+            </b:includable>
+          </b:widget>
+
+          <b:widget id='Label1' locked='false' title='Rubrik' type='Label' version='2' visible='true'>
+            <b:widget-settings>
+              <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+              <b:widget-setting name='display'>CLOUD</b:widget-setting>
+              <b:widget-setting name='selectedLabelsList'></b:widget-setting>
+              <b:widget-setting name='showType'>ALL</b:widget-setting>
+              <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main' var='this'>
+              <div class='widget cloud-label'>
+                <b:if cond='data:title'><h2 class='title'><data:title/></h2></b:if>
+                <div class='widget-content list-label'>
+                  <b:loop values='data:labels' var='label'>
+                    <a expr:href='data:label.url'><data:label.name/> <b:if cond='data:showFreqNumbers'><span class='counter'><data:label.count/></span></b:if></a>
+                  </b:loop>
+                </div>
+              </div>
+            </b:includable>
+          </b:widget>
+
+          <b:widget id='HTML6' locked='false' title='Agenda Jaringan' type='HTML' version='2' visible='true'>
+            <b:widget-settings>
+              <b:widget-setting name='content'>&lt;ul class="flat"&gt; &lt;li&gt;&lt;a href="https://lpkpam.com/#/lpk/kontak" target="_blank" rel="noopener"&gt;Kelas Tata Rias Paes Ageng &amp;#8212; gelombang berikutnya, buka tiap tiga bulan&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="https://riasnusa.com/#/asosiasi/kegiatan" target="_blank" rel="noopener"&gt;Kopdar Perias Nusantara &amp;#8212; Jumat pekan kedua&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="https://paesnusa.com/#/wo/booking" target="_blank" rel="noopener"&gt;Cek ketersediaan tanggal wedding&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="https://uripsedyowidodo.com/#/urip/kontak" target="_blank" rel="noopener"&gt;Kirim aspirasi warga&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;p style="margin-top:10px;font-size:.9rem;opacity:.75"&gt;Tanggal diambil dari kalender jaringan; berubah otomatis saat panitia memperbarui data.&lt;/p&gt;</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main' var='this'>
+              <div class='widget fw-soft'>
+                <b:if cond='data:title'><h2 class='title'><data:title/></h2></b:if>
+                <div class='widget-content'><data:content/></div>
+              </div>
+            </b:includable>
+          </b:widget>
+
+          <b:widget id='HTML3' locked='false' title='Jaringan Situs' type='HTML' version='2' visible='true'>
+            <b:widget-settings>
+              <b:widget-setting name='content'>&lt;ul&gt; &lt;li&gt;&lt;a href="https://lpkpam.com" target="_blank" rel="noopener"&gt;LPK Putri Ayu Mandiri &amp;&#8212; pelatihan bersertifikat&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="https://paesnusa.com" target="_blank" rel="noopener"&gt;Paes Nusa &amp;&#8212; wedding organizer&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="https://riasnusa.com" target="_blank" rel="noopener"&gt;Asosiasi Perias Nusantara&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="https://putriayu.id" target="_blank" rel="noopener"&gt;Mbak Ayu &amp;&#8212; perias paes&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="https://uripsedyowidodo.com" target="_blank" rel="noopener"&gt;Pak Urip Sedyowidodo&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt;</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main' var='this'>
+              <div class='widget fw-soft'>
+                <b:if cond='data:title'><h2 class='title'><data:title/></h2></b:if>
+                <div class='widget-content'><data:content/></div>
+                <p class='fw-quote'>&#8220;Lima situs, satu data, satu arah gerakan.&#8221;</p>
+              </div>
+            </b:includable>
+          </b:widget>
+        </b:section>
+      </aside>
+    </div>
+  </div>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class='fw-foot' id='footer'>
+    <div class='wrap foot-top'>
+      <div class='fbrand'>
+        <b:section id='footer-1' maxwidgets='2' showaddelement='yes'>
+          <b:widget id='HTML4' locked='false' title='Tentang Jaringan' type='HTML' version='2' visible='true'>
+            <b:widget-settings>
+              <b:widget-setting name='content'>&lt;p&gt;Jaringan Digital Nusantara adalah satu sistem yang menghubungkan LPK Putri Ayu Mandiri, Wedding Organizer Paes Nusa, Asosiasi Perias Nusantara, personal branding Mbak Ayu, dan gerakan ekonomi kerakyatan Pak Urip Sedyowidodo. Blog ini menjadi rumah publikasi bersama: satu redaksi, satu basis data, lima suara.&lt;/p&gt; &lt;p class="quotebox"&gt;&amp;#8220;Keahlian yang dibagikan tidak berkurang; ia berlipat.&amp;#8221;&lt;/p&gt;</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main' var='this'>
+              <div class='widget'>
+                <b:if cond='data:title'><h2 class='title'><data:title/></h2></b:if>
+                <div class='widget-content'><data:content/></div>
+              </div>
+            </b:includable>
+          </b:widget>
+        </b:section>
+      </div>
+
+      <div>
+        <b:section id='footer-2' maxwidgets='2' showaddelement='yes'>
+          <b:widget id='PageList2' locked='false' title='Peta Situs' type='PageList' version='2' visible='true'>
+            <b:includable id='main' var='this'>
+              <div class='widget'>
+                <b:if cond='data:title'><h2 class='title'><data:title/></h2></b:if>
+                <ul class='flat'>
+                  <li><a expr:href='data:blog.homepageUrl'>Beranda</a></li>
+                  <b:loop values='data:links' var='link'><li><a expr:href='data:link.target'><data:link.name/></a></li></b:loop>
+                  <li><a expr:href='data:blog.homepageUrl + "feeds/posts/default"'>Umpan RSS</a></li>
+                </ul>
+              </div>
+            </b:includable>
+          </b:widget>
+        </b:section>
+      </div>
+
+      <div>
+        <b:section id='footer-3' maxwidgets='2' showaddelement='yes'>
+          <b:widget id='LinkList1' locked='false' title='Kanal Resmi' type='LinkList' version='2' visible='true'>
+            <b:widget-settings>
+              <b:widget-setting name='sorting'>NONE</b:widget-setting>
+              <b:widget-setting name='text-1'>WhatsApp 0812-3456-7890</b:widget-setting>
+              <b:widget-setting name='link-1'>https://wa.me/6281234567890</b:widget-setting>
+              <b:widget-setting name='text-2'>Email Redaksi</b:widget-setting>
+              <b:widget-setting name='link-2'>mailto:halo@lpkpam.com</b:widget-setting>
+              <b:widget-setting name='text-3'>Instagram Jaringan</b:widget-setting>
+              <b:widget-setting name='link-3'>https://instagram.com</b:widget-setting>
+              <b:widget-setting name='text-4'>YouTube Dokumentasi</b:widget-setting>
+              <b:widget-setting name='link-4'>https://youtube.com</b:widget-setting>
+              <b:widget-setting name='text-0'>Google Maps Kantor</b:widget-setting>
+              <b:widget-setting name='link-0'>https://maps.google.com/?q=Jl.+Imogiri+Timur+Bantul+Yogyakarta</b:widget-setting>
+              <b:widget-setting name='linked-0'>true</b:widget-setting>
+              <b:widget-setting name='linked-1'>true</b:widget-setting>
+              <b:widget-setting name='linked-2'>true</b:widget-setting>
+              <b:widget-setting name='linked-3'>true</b:widget-setting>
+              <b:widget-setting name='linked-4'>true</b:widget-setting>
+              <b:widget-setting name='newWindow-0'>true</b:widget-setting>
+              <b:widget-setting name='newWindow-1'>false</b:widget-setting>
+              <b:widget-setting name='newWindow-2'>true</b:widget-setting>
+              <b:widget-setting name='newWindow-3'>true</b:widget-setting>
+              <b:widget-setting name='newWindow-4'>true</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main' var='this'>
+              <div class='widget'>
+                <b:if cond='data:title'><h2 class='title'><data:title/></h2></b:if>
+                <ul class='flat'>
+                  <b:loop values='data:links' var='link'>
+                    <li><a expr:href='data:link.target' rel='noopener' target='_blank'><data:link.name/></a></li>
+                  </b:loop>
+                </ul>
+              </div>
+            </b:includable>
+          </b:widget>
+        </b:section>
+      </div>
+
+      <div class='news-col'>
+        <b:section id='footer-news' maxwidgets='2' showaddelement='yes'>
+          <b:widget id='HTML7' locked='false' title='Kabar Bulanan' type='HTML' version='2' visible='true'>
+            <b:widget-settings>
+              <b:widget-setting name='content'>&lt;p&gt;Satu email sebulan: jadwal pelatihan, agenda asosiasi, dan catatan lapangan. Tanpa spam.&lt;/p&gt;</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main' var='this'>
+              <div class='widget'>
+                <b:if cond='data:title'><h2 class='title'><data:title/></h2></b:if>
+                <div class='widget-content'><data:content/></div>
+                <form class='news' id='nl'>
+                  <input aria-label='Alamat email' autocomplete='email' id='nlEmail' name='email' placeholder='nama@email.com' type='email'/>
+                  <button type='submit'>Langganan</button>
+                </form>
+                <p class='mb0' id='nlMsg' style='font-size:calc(0.9rem * var(--text-scale));opacity:.8;margin-top:8px'>&#183; Bisa juga lewat <a expr:href='data:blog.homepageUrl + "feeds/posts/default"'>umpan RSS</a>.</p>
+              </div>
+            </b:includable>
+          </b:widget>
+
+          <b:widget id='HTML5' locked='false' title='Kredit' type='HTML' version='2' visible='false'>
+            <b:widget-settings>
+              <b:widget-setting name='content'></b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main' var='this'>
+              <div class='widget' style='display:none'><data:content/></div>
+            </b:includable>
+          </b:widget>
+        </b:section>
+      </div>
+    </div>
+
+    <div class='wrap foot-bottom'>
+      <span>&#169; <span id='yr'>2026</span> <data:blog.title/> &#183; Seluruh tulisan dilisensikan untuk penggunaan non-komersial.</span>
+      <span class='cred'>
+        <span class='mark' aria-hidden='true'>FW</span>
+        <span>Desain Web oleh <a href='https://firsmanweb.example' rel='noopener' target='_blank'>Firman Web</a> &#183; Jaringan Digital Nusantara v3.0</span>
+      </span>
+      <b:section id='credits' maxwidgets='2' showaddelement='no'>
+        <b:widget id='Attribution1' locked='true' title='' type='Attribution' version='2' visible='true'>
+          <b:includable id='main' var='this'>
+            <span class='attribution'>
+              <button class='aatb' data-size='1' type='button'>A</button>
+              <button class='aatb' data-size='1.12' type='button'>A+</button>
+              <button class='aatb' data-size='1.24' type='button'>A++</button>
+              <button class='aatb' id='motionBtn' type='button'>Animasi: mati/nyala</button>
+            </span>
+          </b:includable>
+        </b:widget>
+      </b:section>
+    </div>
+  </footer>
+</div>
+
+<script>
+//<![CDATA[
+(function () {
+  var d = document, r = d.documentElement;
+  /* ==== ISI dengan URL Web App dari code.gs agar form newsletter mengalir ke basis data ==== */
+  var FW_API = ''; /* contoh: https://script.google.com/macros/s/AKfyc.../exec */
+  /* preferensi */
+  try {
+    var sc = localStorage.getItem('fw-text-scale'); if (sc) r.style.setProperty('--text-scale', sc);
+    var mo = localStorage.getItem('fw-theme-motion');
+    if (mo === 'off' || (!mo && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) r.classList.add('reduced');
+  } catch (e) {}
+  var yr = d.getElementById('yr'); if (yr) yr.textContent = new Date().getFullYear();
+
+  /* header + progres baca */
+  var head = d.getElementById('fwHead'), bar = d.getElementById('progress'), t = 0;
+  function onScroll() {
+    if (t) return; t = 1;
+    requestAnimationFrame(function () {
+      t = 0;
+      var y = window.pageYOffset || d.documentElement.scrollTop || 0;
+      if (head) head.classList.toggle('stuck', y > 12);
+      if (bar) { var h = d.documentElement.scrollHeight - window.innerHeight; bar.style.width = (h > 0 ? (y / h) * 100 : 0) + '%'; }
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  /* menu mobile */
+  var mb = d.getElementById('menuBtn');
+  if (mb) mb.addEventListener('click', function () {
+    var open = d.body.classList.toggle('nav-open');
+    mb.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  Array.prototype.forEach.call(d.querySelectorAll('.fw-nav a'), function (a) {
+    a.addEventListener('click', function () { d.body.classList.remove('nav-open'); mb && mb.setAttribute('aria-expanded', 'false'); });
+  });
+  d.addEventListener('keydown', function (e) { if (e.key === 'Escape') d.body.classList.remove('nav-open'); });
+
+  /* muncul saat digulir */
+  var nodes = d.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && nodes.length) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.1 });
+    Array.prototype.forEach.call(nodes, function (n) { io.observe(n); });
+  } else {
+    Array.prototype.forEach.call(nodes, function (n) { n.classList.add('in'); });
+  }
+
+  /* tombol ukuran teks & animasi */
+  Array.prototype.forEach.call(d.querySelectorAll('[data-size]'), function (b) {
+    if (sc && b.dataset.size === sc) b.classList.add('on');
+    b.addEventListener('click', function (e) {
+      e.preventDefault();
+      r.style.setProperty('--text-scale', b.dataset.size);
+      try { localStorage.setItem('fw-text-scale', b.dataset.size); } catch (err) {}
+      Array.prototype.forEach.call(d.querySelectorAll('[data-size]'), function (x) { x.classList.toggle('on', x === b); });
+    });
+  });
+  var mbtn = d.getElementById('motionBtn');
+  if (mbtn) {
+    mbtn.addEventListener('click', function () {
+      var off = r.classList.toggle('reduced');
+      mbtn.textContent = off ? 'Animasi: mati' : 'Animasi: nyala';
+      try { localStorage.setItem('fw-theme-motion', off ? 'off' : 'on'); } catch (e2) {}
+    });
+    if (r.classList.contains('reduced')) mbtn.textContent = 'Animasi: mati';
+  }
+
+  /* tautan keluar: aman + terbaca */
+  Array.prototype.forEach.call(d.querySelectorAll('.post-body a[href^="http"]'), function (a) {
+    if (a.host && a.host !== location.host) { a.target = '_blank'; a.rel = 'noopener noreferrer nofollow'; }
+  });
+  /* tabel panjang bisa digeser di layar sempit */
+  Array.prototype.forEach.call(d.querySelectorAll('.post-body table'), function (tb) {
+    if (tb.parentElement && tb.parentElement.className === 'table-scroll') return;
+    var w = d.createElement('div'); w.className = 'table-scroll';
+    tb.parentNode.insertBefore(w, tb); w.appendChild(tb);
+  });
+  /* gambar di dalam isi: tambah bingkai halus */
+  Array.prototype.forEach.call(d.querySelectorAll('.post-body img'), function (im) {
+    if (!im.loading) im.loading = 'lazy';
+    im.decoding = 'async';
+  });
+  /* newsletter: POST ke REST API jaringan bila FW_API diisi */
+  var nl = d.getElementById('nl');
+  if (nl) {
+    nl.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var em = d.getElementById('nlEmail'), msg = d.getElementById('nlMsg');
+      var ok = /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test((em.value || '').trim());
+      if (!ok) { if (msg) msg.innerHTML = '&#9888; Isi email dengan benar, mis. nama@email.com'; return; }
+      var payload = { email: em.value.trim(), status: 'Baru', minat: 'Semua', source: 'blogspot-theme', blog: location.hostname };
+      if (!FW_API) {
+        try { localStorage.setItem('fw-newsletter', JSON.stringify(payload)); } catch (err2) {}
+        if (msg) msg.innerHTML = '&#10003; Tercatat di perangkat ini. Redaksi akan menyalinnya ke basis data jaringan.';
+        em.value = ''; return;
+      }
+      var url = FW_API + '/subscriber';
+      var done = function (txt) { if (msg) msg.innerHTML = txt; em.value = ''; };
+      try {
+        fetch(url, { method: 'POST', headers: { 'Content-Type': 'text/plain' }, body: JSON.stringify(payload), mode: 'cors' })
+          .then(function (r) { return r.json(); })
+          .then(function (j) { done(j && j.ok ? '&#10003; Email terdaftar. Terima kasih!' : '&#9888; Server menolak: ' + ((j && (j.message || j.error)) || 'tidak diketahui')); })
+          .catch(function () { done('&#9888; Server tidak terjangkau. Data disimpan lokal.'); });
+      } catch (err3) { done('&#9888; Browser menolak permintaan. Kirim manual ke redaksi.'); }
+    });
+  }
+
+  /* salin tautan */
+  Array.prototype.forEach.call(d.querySelectorAll('.fw-share a'), function (a) {
+    if (a.textContent.indexOf('Salin') === 0) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        var url = a.href;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(function () { a.textContent = 'Tautan tersalin ✓'; setTimeout(function () { a.textContent = 'Salin tautan'; }, 2200); });
+        } else { window.prompt('Salin tautan ini:', url); }
+      });
+    }
+  });
+})();
+//]]>
+</script>
+</body>
+</html>
